@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/styles/style.css":
-/*!******************************!*\
-  !*** ./src/styles/style.css ***!
-  \******************************/
+/***/ "./src/styles/main.css":
+/*!*****************************!*\
+  !*** ./src/styles/main.css ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14,10 +14,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/modules/sub1.js":
-/*!*****************************!*\
-  !*** ./src/modules/sub1.js ***!
-  \*****************************/
+/***/ "./src/js/modules/sub1.js":
+/*!********************************!*\
+  !*** ./src/js/modules/sub1.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -31,10 +31,10 @@ function message1() {
 
 /***/ }),
 
-/***/ "./src/modules/sub2.js":
-/*!*****************************!*\
-  !*** ./src/modules/sub2.js ***!
-  \*****************************/
+/***/ "./src/js/modules/sub2.js":
+/*!********************************!*\
+  !*** ./src/js/modules/sub2.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -107,13 +107,13 @@ function message2() {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_sub1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sub1 */ "./src/modules/sub1.js");
-/* harmony import */ var _modules_sub2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sub2 */ "./src/modules/sub2.js");
-/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _modules_sub1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sub1 */ "./src/js/modules/sub1.js");
+/* harmony import */ var _modules_sub2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sub2 */ "./src/js/modules/sub2.js");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/main.css */ "./src/styles/main.css");
 
 
 
