@@ -1,0 +1,64 @@
+body {
+    color: black;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+.webpack {
+    &-wrapper {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 24px;
+        padding-bottom: 32px;
+        background: rgb(221, 221, 221);
+        text-align: center;
+    }
+    &-title {
+        font-size: 32px;
+        color: orange;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px 40px;
+        list-style: none;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        background: rgb(160, 180, 248);
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.icons {
+    &-wrapper {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.mv {
+    &-wrapper {
+        width: 100%;
+        height: 300px;
+        background-image: url('../images/panda.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

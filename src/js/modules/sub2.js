@@ -1,3 +1,3 @@
-export function message2() {
+export default () => {
     console.log('コチラはサブ２の内容を表示しています。');
 }

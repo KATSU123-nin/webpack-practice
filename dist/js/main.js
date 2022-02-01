@@ -2,18 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/styles/main.css":
-/*!*****************************!*\
-  !*** ./src/styles/main.css ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/js/modules/sub1.js":
 /*!********************************!*\
   !*** ./src/js/modules/sub1.js ***!
@@ -22,12 +10,11 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "message1": () => (/* binding */ message1)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function message1() {
-    console.log('コチラはサブ１の内容を表示しています。');
-}
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  console.log('コチラはサブ１の内容を表示しています。');
+});
 
 /***/ }),
 
@@ -39,11 +26,22 @@ function message1() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "message2": () => (/* binding */ message2)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function message2() {
-    console.log('コチラはサブ２の内容を表示しています。');
-}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  console.log('コチラはサブ２の内容を表示しています。');
+});
+
+/***/ }),
+
+/***/ "./src/styles/main.scss":
+/*!******************************!*\
+  !*** ./src/styles/main.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
 
 /***/ })
@@ -113,16 +111,19 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sub1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sub1 */ "./src/js/modules/sub1.js");
 /* harmony import */ var _modules_sub2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sub2 */ "./src/js/modules/sub2.js");
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/main.css */ "./src/styles/main.css");
-
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/main.scss */ "./src/styles/main.scss");
 
 
 
 console.log('コチラは index.js の内容を表示しています。');
 
-(0,_modules_sub1__WEBPACK_IMPORTED_MODULE_0__.message1)();
-(0,_modules_sub2__WEBPACK_IMPORTED_MODULE_1__.message2)();
+const testMessage = () => {
+  console.log('Check if ES6 was compiled to ES5.');
+};
 
+testMessage();
+(0,_modules_sub1__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_sub2__WEBPACK_IMPORTED_MODULE_1__["default"])();
 })();
 
 /******/ })()
