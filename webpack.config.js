@@ -1,7 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const loader = require('sass-loader');
+const ESLintPlugin = require('eslint-webpack-plugin');
+// const loader = require('sass-loader');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
@@ -26,15 +27,16 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        // options: {
-                        //     presets: ['@babel/preset-env'],
-                        // },
-                    },
-                ],
+                loader: 'babel-loader'
             },
+            // {
+            // test: /\.js$/,
+            // exclude: /node_modules/,
+            // use: [
+            //     'babel-loader',
+            //     'eslint-loader'
+            //     ]
+            // },
             {
                 test: /\.(css|sass|scss)$/,
                 use: [
@@ -76,9 +78,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            inject: 'body',
             filename: 'index.html',
+            inject: 'body',
         }),
-        // new CleanWebpackPlugin(),
+        new ESLintPlugin({
+            extensions: ['.js'],
+            exclude: 'node_modules'
+        })
+
     ]
 };
