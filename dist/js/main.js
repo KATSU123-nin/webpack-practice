@@ -121,11 +121,6 @@ const testMessage = () => {
   console.log('Check if ES6 was compiled to ES5.');
 };
 
-const okPattern = "これは正しい構文だよ！";
-console.log(okPattern);
-let undif = "変数を定義するよ";
-noundif = "この変数は定義してないよ！";
-EslintErrCheck();
 testMessage();
 (0,_modules_sub1__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_modules_sub2__WEBPACK_IMPORTED_MODULE_1__["default"])();

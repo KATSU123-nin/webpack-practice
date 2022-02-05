@@ -2,8 +2,6 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-// const loader = require('sass-loader');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
@@ -12,7 +10,6 @@ module.exports = {
     devtool: false,
     output: {
         path: path.resolve(__dirname, 'dist'),
-        // assetModuleFilename: 'images/[hash][ext][query]',
         filename: 'js/main.js',
         clean: true,
     },
@@ -29,14 +26,6 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
-            // {
-            // test: /\.js$/,
-            // exclude: /node_modules/,
-            // use: [
-            //     'babel-loader',
-            //     'eslint-loader'
-            //     ]
-            // },
             {
                 test: /\.(css|sass|scss)$/,
                 use: [
@@ -45,12 +34,12 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
-                        options: {
-                            url: true,
-                        },
                     },
                     {
-                        loader: 'sass-loader'
+                        loader: 'postcss-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
                     }
                 ]
             },

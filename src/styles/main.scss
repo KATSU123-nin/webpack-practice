@@ -20,6 +20,11 @@ ul {
     &-title {
         font-size: 32px;
         color: orange;
+        transition: all 3s;
+
+        &:hover {
+            transform: rotate(45deg);
+        }
     }
 
     &-list {

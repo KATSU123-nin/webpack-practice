@@ -14,5 +14,10 @@ module.exports = {
       },
     },
     root: true,
-    rules: {}
+    globals: {
+        "_styles_main_scss__WEBPACK_IMPORTED_MODULE_2__": false
+    },
+    rules: {
+        "no-unused-vars": "off"
+    }
   };
