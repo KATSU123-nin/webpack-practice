@@ -5,12 +5,12 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'development', // 分割
     entry: './src/js/main.js',
-    devtool: false,
+    devtool: false, // 分割
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/main.js',
+        filename: 'js/main.js', // 分割
         clean: true,
     },
     devServer: {
@@ -33,8 +33,11 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
-                        loader: 'css-loader',
-                    },
+                        loader: "css-loader",
+                          options: {
+                            importLoaders: 2,
+                           },
+                      },
                     {
                         loader: 'postcss-loader',
                     },
@@ -44,26 +47,26 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|woff2?|tff|eot)$/,
                 use: [
                     {
-                        loader: 'image-webpack-loader' // 追加
+                        loader: 'image-webpack-loader'
                     }
                 ],
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name][ext]',
+                    filename: 'images/[name][ext]',  // 分割
                 },
             },
             {
-                test: /\.html$/i,
+                test: /\.html$/,
                 loader: 'html-loader',
             },
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/main.css'
+            filename: 'styles/main.css' // 分割
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
