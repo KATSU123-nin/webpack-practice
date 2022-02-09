@@ -1,16 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 
-module.exports = {
-    mode: 'development', // 分割
+module.exports = ({ outputFile, outputImg, outputCss }) => ({
     entry: './src/js/main.js',
-    devtool: false, // 分割
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/main.js', // 分割
+        filename: `${outputFile}.js`,
         clean: true,
     },
     devServer: {
@@ -55,7 +52,7 @@ module.exports = {
                 ],
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name][ext]',  // 分割
+                    filename: `images/${outputImg}[ext]`,
                 },
             },
             {
@@ -66,12 +63,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/main.css' // 分割
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
-            inject: 'body',
+            filename: `styles/${outputCss}.css`
         }),
         new ESLintPlugin({
             extensions: ['.js'],
@@ -79,4 +71,4 @@ module.exports = {
         })
 
     ]
-};
+});

@@ -1,0 +1,1 @@
+!function(){"use strict";console.log("コチラは index.js の内容を表示しています。"),console.log("Check if ES6 was compiled to ES5."),console.log("コチラはサブ１の内容を表示しています。"),console.log("コチラはサブ２の内容を表示しています。")}();
