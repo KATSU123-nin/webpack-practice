@@ -1,5 +1,6 @@
-import sub1 from './modules/sub1'
-import sub2 from './modules/sub2'
+import sub1 from './modules/sub1';
+import sub2 from './modules/sub2';
+import "bootstrap";
 import '../styles/main.scss';
 
 console.log('コチラは index.js の内容を表示しています。');
