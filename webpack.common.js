@@ -34,10 +34,20 @@ module.exports = ({ outputFile, outputImg, outputCss }) => ({
                           options: {
                             importLoaders: 2,
                            },
-                      },
-                    {
-                        loader: 'postcss-loader',
                     },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                          // PostCSS側でもソースマップを有効にする
+                          sourceMap: true,
+                          postcssOptions: {
+                            // ベンダープレフィックスを自動付与する
+                              plugins: [
+                                  require("autoprefixer")({ grid: true })
+                              ],
+                          },
+                        },
+                      },
                     {
                         loader: 'sass-loader',
                     }

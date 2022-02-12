@@ -1,6 +1,8 @@
-import sub1 from './modules/sub1';
-import sub2 from './modules/sub2';
-import "bootstrap";
+import sub1 from './js_modules/sub1';
+
+import { dropdown, carousel } from "bootstrap";
+// JavaScript module file used in Bootstrap
+// alert | base-component | button | carousel | collapse | dropdown | modal | offcanval | popover | scrollspy | tab | tast | tooltip
 import '../styles/main.scss';
 
 console.log('コチラは index.js の内容を表示しています。');
@@ -11,4 +13,3 @@ const testMessage = () => {
 
 testMessage();
 sub1();
-sub2();
